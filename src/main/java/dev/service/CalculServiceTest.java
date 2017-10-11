@@ -16,11 +16,12 @@ public class CalculServiceTest {
 	@Test
 	public void testAdditionner() throws Exception {
 		LOG.info("Etant donné, une instance de la classe CalculService");
-		// TODO
+		CalculService testAddition = new CalculService();
+		
 		LOG.info("Lorsque j'évalue l'addition de l'expression 1+3+4");
-		// TODO
-		int somme = 0;
+		int somme = testAddition.additionner("1+3+4");
+		
 		LOG.info("Alors j'obtiens le résultat 8");
-		// TODO
+		assert(somme == 8);
 	}
 }
