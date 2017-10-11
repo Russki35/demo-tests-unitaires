@@ -14,9 +14,15 @@ public class CalculService {
 
 	private static final Logger LOG = LoggerFactory.getLogger(CalculService.class);
 
-	public int additionner(int expression) {
-
+	public int additionner(String expression) {
 		
-		return 0;
+		int somme = 0;
+		String[] tab = expression.split("\\+");
+		
+		for (String nb : tab){
+			somme = somme + Integer.parseInt(nb); 
+		}
+		
+		return somme;
 	}
 }
